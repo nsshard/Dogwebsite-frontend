@@ -7,6 +7,32 @@
   pointer-events: none;
 }
 
+.homepagestuff {
+position: absolute;
+    left: 410px;
+    top: 200px;
+align-items: center;
+
+}
+
+.floattext1 {
+position: absolute;
+    left: 480px;
+    top: 200px;
+font-size: 50px;
+font-weight: bolder;
+
+}
+
+.floattext2 {
+position: absolute;
+    left: 85px;
+    top: 300px;
+width:555px;
+font-size: 30px;
+font-weight: bold;
+
+}
 
 
 .indexbut {
