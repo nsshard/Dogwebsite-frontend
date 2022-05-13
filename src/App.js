@@ -1,12 +1,57 @@
 import logo from './logo.svg';
 import './App.css';
 
+window.onload = function () {
+
+};
+
+function indexpage()
+{
+	document.getElementsByClassName('homepagestuff')[0].style.display = 'block'
+	document.getElementsByClassName('browsedogsstuff')[0].style.display = 'none'
+	document.getElementsByClassName('loginstuff')[0].style.display = 'none'
+	document.getElementsByClassName('registerstuff')[0].style.display = 'none'
+}
+
+function browsepage()
+{
+	document.getElementsByClassName('homepagestuff')[0].style.display = 'none'
+	document.getElementsByClassName('browsedogsstuff')[0].style.display = 'block'
+	document.getElementsByClassName('loginstuff')[0].style.display = 'none'
+	document.getElementsByClassName('registerstuff')[0].style.display = 'none'
+}
+
+function loginpage()
+{
+	document.getElementsByClassName('homepagestuff')[0].style.display = 'none'
+	document.getElementsByClassName('browsedogsstuff')[0].style.display = 'none'
+	document.getElementsByClassName('loginstuff')[0].style.display = 'block'
+	document.getElementsByClassName('registerstuff')[0].style.display = 'none'
+}
+
+function registerpage()
+{
+	document.getElementsByClassName('homepagestuff')[0].style.display = 'none'
+	document.getElementsByClassName('browsedogsstuff')[0].style.display = 'none'
+	document.getElementsByClassName('loginstuff')[0].style.display = 'none'
+	document.getElementsByClassName('registerstuff')[0].style.display = 'register'
+}
+
+
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
      
+	
+		
+
+
+
+ 
+
 
 
 
@@ -27,26 +72,30 @@ The Canine Shelter of Hong Kong was formed in 1999, and our mission is formed on
 
 
 <div class="indexbut">
-<button type="button"  onclick="indexpage()" class="btn btn-secondary btn-lg">Homepage</button>
+<button type="button"  class="btn btn-secondary btn-lg" onClick={indexpage}>Homepage</button>
 </div>
 
 <div class="browsebut">
-<button type="button"  onclick="browsepage()" class="btn btn-secondary btn-lg">Browse dogs</button>
+<button type="button" class="btn btn-secondary btn-lg" onClick={browsepage}>Browse dogs</button>
 </div>
 
 <div class="loginbut">
-<button type="button"  onclick="login()" class="btn btn-secondary btn-lg">Login</button>
+<button type="button" class="btn btn-secondary btn-lg" onClick={loginpage}>Login</button>
 </div>
 
 <div class="registerbut">
-<button type="button"  onclick="register()" class="btn btn-secondary btn-lg">Register</button>
+<button type="button" class="btn btn-secondary btn-lg" onClick={registerpage}>Register</button>
 </div>
+
+
 
 
 
       </header>
     </div>
+	
   );
+  
 }
 
 export default App;
