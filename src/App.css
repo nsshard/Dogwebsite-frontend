@@ -7,6 +7,40 @@
   pointer-events: none;
 }
 
+
+
+.indexbut {
+ position: absolute;
+    width: 290px;
+    left: 1100px;
+    top: 55px;
+
+}
+
+.browsebut {
+ position: absolute;
+    width: 290px;
+    left: 1270px;
+    top: 55px;
+
+}
+
+.loginbut {
+ position: absolute;
+    width: 290px;
+    left: 1413px;
+    top: 55px;
+
+}
+
+.registerbut {
+ position: absolute;
+    width: 290px;
+    left: 1540px;
+    top: 55px;
+
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
