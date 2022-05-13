@@ -24,6 +24,30 @@ font-weight: bolder;
 
 }
 
+.loginform {
+position: absolute;
+  left: 800px;
+    top: 500px;
+}
+
+.blacktext1 {
+position: absolute;
+color:black;
+font-size: 30px;
+
+
+
+}
+
+.blacktext2 {
+position: absolute;
+color:black;
+font-size: 30px;
+
+
+
+}
+
 .floattext2 {
 position: absolute;
     left: 85px;

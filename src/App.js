@@ -2,30 +2,30 @@ import logo from './logo.svg';
 import './App.css';
 
 window.onload = function () {
-
+indexpage()
 };
 
 function indexpage()
 {
 	document.getElementsByClassName('homepagestuff')[0].style.display = 'block'
+		document.getElementsByClassName('loginstuff')[0].style.display = 'none'
 	document.getElementsByClassName('browsedogsstuff')[0].style.display = 'none'
-	document.getElementsByClassName('loginstuff')[0].style.display = 'none'
 	document.getElementsByClassName('registerstuff')[0].style.display = 'none'
 }
 
 function browsepage()
 {
 	document.getElementsByClassName('homepagestuff')[0].style.display = 'none'
-	document.getElementsByClassName('browsedogsstuff')[0].style.display = 'block'
 	document.getElementsByClassName('loginstuff')[0].style.display = 'none'
+	document.getElementsByClassName('browsedogsstuff')[0].style.display = 'block'
 	document.getElementsByClassName('registerstuff')[0].style.display = 'none'
 }
 
 function loginpage()
 {
 	document.getElementsByClassName('homepagestuff')[0].style.display = 'none'
+		document.getElementsByClassName('loginstuff')[0].style.display = 'block'
 	document.getElementsByClassName('browsedogsstuff')[0].style.display = 'none'
-	document.getElementsByClassName('loginstuff')[0].style.display = 'block'
 	document.getElementsByClassName('registerstuff')[0].style.display = 'none'
 }
 
@@ -34,7 +34,7 @@ function registerpage()
 	document.getElementsByClassName('homepagestuff')[0].style.display = 'none'
 	document.getElementsByClassName('browsedogsstuff')[0].style.display = 'none'
 	document.getElementsByClassName('loginstuff')[0].style.display = 'none'
-	document.getElementsByClassName('registerstuff')[0].style.display = 'register'
+	document.getElementsByClassName('registerstuff')[0].style.display = 'block'
 }
 
 
@@ -68,6 +68,33 @@ The Canine Shelter of Hong Kong was formed in 1999, and our mission is formed on
 <img src="indexdog.jpg"> 
 </img>
 </div>
+
+
+
+
+<div class="loginstuff">
+<div class="loginform">
+<form>
+  
+    <div class="blacktext1">Username</div>
+	<br></br>
+	
+    <input type="text" name="Username" />
+	<br></br>
+<div class="blacktext2">Password</div>
+	<br></br>
+   <input type="text" name="Password" />
+   
+   <br></br>
+  <input type="submit" value="Submit" />
+  
+
+</form>
+</div>
+</div>
+
+
+
 
 
 
