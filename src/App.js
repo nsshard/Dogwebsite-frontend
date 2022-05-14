@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Homepage from "./homepage";
 import Browsedogs from "./browsedogs";
-import Login from "./homepage";
+import Login from "./login";
 import Register from "./register";
 
 class App extends Component {
