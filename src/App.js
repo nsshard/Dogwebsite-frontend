@@ -2,10 +2,10 @@ import "./App.css";
 import React, { Component } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import homepage from "./homepage";
-import browsedogs from "./browsedogs";
-import login from "./homepage";
-import register from "./register";
+import Homepage from "./homepage";
+import Browsedogs from "./browsedogs";
+import Login from "./homepage";
+import Register from "./register";
 
 class App extends Component {
   render() {
@@ -48,10 +48,10 @@ class App extends Component {
           </div>
         </div>
         <Routes>
-          <Route path="/homepage" component={homepage} />
-          <Route path="/browsedogs" component={browsedogs} />
-          <Route path="/login" component={login} />
-          <Route path="/register" component={register} />
+          <Route path="/homepage" element={<Homepage/>} />
+          <Route path="/browsedogs" element={<Browsedogs/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
         </Routes>
       </Router>
     );
