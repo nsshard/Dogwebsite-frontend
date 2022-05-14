@@ -14,11 +14,11 @@ class register extends Component {
 <div className="registerform">
 <form>
   
-    <div className="blacktext1">Username</div>
+    <div className="blacktext1">Username <input type="text" name="Username" />
 	<br></br>
 	
-    <input type="text" name="Username" />
-	<br></br>
+    
+	
 <div className="blacktext2">Password</div>
 	<br></br>
    <input type="text" name="Password" />
@@ -33,7 +33,7 @@ class register extends Component {
    <br></br>
   <input type="submit" value="Submit" />
   
-
+</div>
 </form>
 </div>
 </div>

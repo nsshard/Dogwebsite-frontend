@@ -15,7 +15,7 @@ class App extends Component {
        <div className="homepagestuff">
           <div className="buttonrows">
             <div className="indexbut">
-              <button type="button"  className="btn btn-secondary btn-lg">
+              <button type="button"  className="btn btn-light btn-lg active">
                 <Link to={"/homepage"} className="nav-link">
                   Homepage
                 </Link>
@@ -23,7 +23,7 @@ class App extends Component {
             </div>
 
             <div className="browsebut">
-              <button type="button"  className="btn btn-secondary btn-lg">
+              <button type="button"  className="btn btn-light btn-lg active">
                 <Link to={"/browsedogs"} className="nav-link">
                   Browse dogs
                 </Link>
@@ -31,7 +31,7 @@ class App extends Component {
             </div>
 
             <div className="loginbut">
-              <button type="button" className="btn btn-secondary btn-lg">
+              <button type="button" className="btn btn-light btn-lg active">
                 <Link to={"/login"} className="nav-link">
                   Login
                 </Link>
@@ -39,7 +39,7 @@ class App extends Component {
             </div>
 
             <div className="registerbut">
-              <button type="button" className="btn btn-secondary btn-lg">
+              <button type="button" className="btn btn-light btn-lg active">
                 <Link to={"/register"} className="nav-link">
                   Register
                 </Link>

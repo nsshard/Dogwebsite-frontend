@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-
+import './App.css';
 
 class homepage extends Component {
   render() {
     return (
 
+<div className="homepagestuff">
 <div>
 <div className="floattext1">
 WELCOME!
@@ -17,7 +18,7 @@ The Canine Shelter of Hong Kong was formed in 1999, and our mission is formed on
 <img src="indexdog.jpg"> 
 </img>
 
-
+</div>
 </div>
 
 

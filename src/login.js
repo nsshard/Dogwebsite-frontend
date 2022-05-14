@@ -14,19 +14,18 @@ class login extends Component {
 <div className="loginform">
 <form>
   
-    <div className="blacktext1">Username</div>
-	<br></br>
-	
-    <input type="text" name="Username" />
+    <div className="blacktext1">Username <input type="text" name="Username" />
+
 	<br></br>
 <div className="blacktext2">Password</div>
 	<br></br>
    <input type="text" name="Password" />
    
    <br></br>
+
   <input type="submit" value="Submit" />
   
-
+</div>
 </form>
 </div>
 </div>

@@ -34,10 +34,18 @@ font-weight: bold;
 color: white;
 }
 
-.loginform {
+.loginstuff {
 position: absolute;
-  left: 800px;
+  left: 850px;
     top: 500px;
+
+}
+
+.registerstuff {
+position: absolute;
+  left: 850px;
+    top: 400px;
+
 }
 
 .blacktext1 {
