@@ -10,24 +10,24 @@ class register extends Component {
     return (
 <div>
 
-<div class="registerstuff">
-<div class="registerform">
+<div className="registerstuff">
+<div className="registerform">
 <form>
   
-    <div class="blacktext1">Username</div>
+    <div className="blacktext1">Username</div>
 	<br></br>
 	
     <input type="text" name="Username" />
 	<br></br>
-<div class="blacktext2">Password</div>
+<div className="blacktext2">Password</div>
 	<br></br>
    <input type="text" name="Password" />
    	<br></br>
-   <div class="blacktext2">Email</div>
+   <div className="blacktext2">Email</div>
 	<br></br>
    <input type="text" name="Email" />
    <br></br>
-   <div class="blacktext2">Staff code (optional)	</div>
+   <div className="blacktext2">Staff code (optional)	</div>
 	<br></br>
    <input type="text" name="Staff code" />
    <br></br>

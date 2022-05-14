@@ -10,16 +10,16 @@ class login extends Component {
     return (
 <div>
 
-<div class="loginstuff">
-<div class="loginform">
+<div className="loginstuff">
+<div className="loginform">
 <form>
   
-    <div class="blacktext1">Username</div>
+    <div className="blacktext1">Username</div>
 	<br></br>
 	
     <input type="text" name="Username" />
 	<br></br>
-<div class="blacktext2">Password</div>
+<div className="blacktext2">Password</div>
 	<br></br>
    <input type="text" name="Password" />
    

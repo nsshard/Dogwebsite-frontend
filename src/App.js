@@ -11,34 +11,35 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div class="homepagestuff">
-          <div class="buttonrows">
-            <div class="indexbut">
-              <button type="button" class="btn btn-secondary btn-lg">
+       
+       <div className="homepagestuff">
+          <div className="buttonrows">
+            <div className="indexbut">
+              <button type="button"  className="btn btn-secondary btn-lg">
                 <Link to={"/homepage"} className="nav-link">
                   Homepage
                 </Link>
               </button>
             </div>
 
-            <div class="browsebut">
-              <button type="button" class="btn btn-secondary btn-lg">
+            <div className="browsebut">
+              <button type="button"  className="btn btn-secondary btn-lg">
                 <Link to={"/browsedogs"} className="nav-link">
                   Browse dogs
                 </Link>
               </button>
             </div>
 
-            <div class="loginbut">
-              <button type="button" class="btn btn-secondary btn-lg">
+            <div className="loginbut">
+              <button type="button" className="btn btn-secondary btn-lg">
                 <Link to={"/login"} className="nav-link">
                   Login
                 </Link>
               </button>
             </div>
 
-            <div class="registerbut">
-              <button type="button" class="btn btn-secondary btn-lg">
+            <div className="registerbut">
+              <button type="button" className="btn btn-secondary btn-lg">
                 <Link to={"/register"} className="nav-link">
                   Register
                 </Link>
@@ -46,9 +47,8 @@ class App extends Component {
             </div>
           </div>
         </div>
-
         <Routes>
-          <Route exact path="/" component={homepage} />
+          <Route path="/homepage" component={homepage} />
           <Route path="/browsedogs" component={browsedogs} />
           <Route path="/login" component={login} />
           <Route path="/register" component={register} />
