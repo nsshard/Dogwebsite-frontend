@@ -7,6 +7,10 @@ import Browsedogs from "./browsedogs";
 import Login from "./login";
 import Register from "./register";
 
+   
+
+
+
 class App extends Component {
   render() {
     return (

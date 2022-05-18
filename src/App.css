@@ -52,13 +52,38 @@ position: absolute;
 position: absolute;
 color:black;
 font-size: 30px;
+top:-50px;
 }
 
 .blacktext2 {
 position: absolute;
 color:black;
 font-size: 30px;
+top:50px;
 }
+
+
+.form1 {
+position: absolute;
+color:black;
+font-size: 30px;
+}
+
+.form2 {
+position: absolute;
+color:black;
+font-size: 30px;
+top:100px;
+}
+
+.send {
+position: absolute;
+color:black;
+font-size: 30px;
+top:160px;
+}
+
+
 
 .buttonrows {
 position: absolute;
