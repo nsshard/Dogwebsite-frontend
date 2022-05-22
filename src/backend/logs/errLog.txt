@@ -1,2 +1,10 @@
 20220520	19:42:47	37b4d901-27e9-4e99-b050-998d276caebd	ReferenceError: path is not defined
 20220520	19:44:26	e17586f9-0b5d-4133-97f1-4458e1aeb7fa	ReferenceError: path is not defined
+20220521	16:09:50	837b7740-887b-45db-a52c-ae53de8b9a90	Error: Not allowed by CORS
+20220521	16:09:52	8a93e0d5-f8f5-4622-8b29-5b0e9a4debe8	Error: Not allowed by CORS
+20220522	19:19:17	742f8861-7977-43b4-98b4-81d1ecc4e0b0	ReferenceError: Cannot access 'rolesArray' before initialization
+20220522	19:20:23	a7f5c9aa-987a-4b6f-ac8b-3d5a2592958a	ReferenceError: Cannot access 'rolesArray' before initialization
+20220522	19:20:42	d8db7930-7fd9-460d-9840-7e4bbeed50ee	ReferenceError: Cannot access 'rolesArray' before initialization
+20220522	23:37:26	ca8ed2b9-77f2-41d1-8bad-0c630573a4e1	TypeError: Cannot read properties of undefined (reading 'map')
+20220522	23:57:13	b5e1b1c4-be12-4c82-8252-563531f50034	TypeError: Cannot read properties of undefined (reading 'map')
+20220522	23:57:13	81954209-d56a-48c1-ac96-ee753222f138	TypeError: Cannot read properties of undefined (reading 'map')

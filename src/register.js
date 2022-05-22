@@ -1,59 +1,145 @@
-import './App.css';
-import React, { Component } from "react";
+import { useRef, useState, useEffect } from "react";
+import "./App.css";
+import axios from './axios';
+const REGISTER_URL = '/register';
 
-var salt = '2irjv34vawirj2jwjvwjreka';
-var SHA256 = require("crypto-js/sha256");
 
-  function validate() {
-var USERNAME = document.getElementById("USERNAME").value;
-var PASSWORD = document.getElementById("PASSWORD").value;
-var EMAIL = document.getElementById("EMAIL").value;
-var STAFFCODE = document.getElementById("STAFFCODE").value;
-}
+const Register = () => {
+    const userRef = useRef();
+    const errRef = useRef();
 
-class register extends Component {
-  render() {
+    const [user, setUser] = useState('');
+    const [pwd, setPwd] = useState('');
+    const [staffcode, setStaff] = useState('');
+    const [errMsg, setErrMsg] = useState('');
+    const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+        userRef.current.focus();
+    }, [])
+
+    
+
+    useEffect(() => {
+        setErrMsg('');
+    }, [user, pwd, staffcode])
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        alert('You have input in '+[user]+' as username');
+        alert('You have input in '+[pwd]+' as password');
+        alert('You have input in '+[staffcode]+' as staffcode');
+        alert('Your registration request is now sent to server for processing');
+      
+        try {
+            const response = await axios.post(REGISTER_URL,
+                JSON.stringify({ user, pwd, staffcode}),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            );
+            setSuccess(true);
+         
+            setUser('');
+            setPwd('');
+            setStaff('');
+          
+        } catch (err) {
+            if (!err?.response) {
+                setErrMsg('No Server Response');
+            } else if (err.response?.status === 409) {
+                setErrMsg('Username Taken');
+            } else {
+                setErrMsg('Registration Failed')
+            }
+            errRef.current.focus();
+        }
+    }
+
     return (
+        <>
+            {success ? (
+                <section>
+                     <div className="blacktext4">
+                  <br></br>
+                    <h1>Thank you for making an account! You may now login at the login!</h1>
+                    </div>
+                </section>
+            ) : (
+                <section>
+                    <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+                    <div className="blacktext4">
+                    <h1>Register</h1>
+                    </div>
+                    <form onSubmit={handleSubmit}>
+                    <div className="loginstuff">
+                        <div className="blacktext1">
+                        <label htmlFor="username">
+                            Username:
+                         
+                        </label>
+                        <input
+                            type="text"
+                            id="username"
+                            ref={userRef}
+                            autoComplete="off"
+                            onChange={(e) => setUser(e.target.value)}
+                            value={user}
+                            required
+                            aria-describedby="uidnote"
+                        />
+                    </div>
+                    <div className="blacktext2">
+                        <label htmlFor="password">
+                            Password:
+                           
+                        </label>
+                        <input
+                            type="password"
+                            id="password"
+                            onChange={(e) => setPwd(e.target.value)}
+                            value={pwd}
+                            required
+                    
+                            aria-describedby="pwdnote"
+                        />
+                   </div>
+                   <div className="blacktext5">
+                  <label htmlFor="staffcode">
+                            Staff code:
+                         
+                        </label>
+                        <input
+                            type="text"
+                            id="staffcode"
+                            autoComplete="off"
+                            onChange={(e) => setStaff(e.target.value)}
+                            value={staffcode}
+                            required
+                            aria-describedby="uidnote"
+                        />
 
 
 
-
-<div>
-
-<div className="registerstuff">
-<div className="registerform">
-<form>
-  
-    <div className="blacktext1">Username <input type="USERNAME" name="USERNAME" />
-	<br></br>
-	
-  
-	
-<div className="blacktext2">Password</div>
-	<br></br>
-   <input type="text" name="PASSWORD" />
-   	<br></br>
-   <div className="blacktext2">Email</div>
-	<br></br>
-   <input type="text" name="EMAIL" />
-   <br></br>
-   <div className="blacktext2">Staff code (optional)</div>
-	<br></br>
-   <input type="text" name="STAFFCODE" />
-   <br></br>
-  <input type="submit" value="Submit" onClick={validate} />
-  
+                       
+                       
+<div className="blacktext6">
 </div>
-</form>
-</div>
-</div>
-</div>
-
-
- );
-  }
+                        <button>Sign Up</button>
+                        </div>
+                        </div>
+                    </form>
+                    <p>
+                      
+                        <span className="line">
+                    
+                        </span>
+                    </p>
+                </section>
+            )}
+        </>
+    )
 }
 
-
-
-export default register;
+export default Register

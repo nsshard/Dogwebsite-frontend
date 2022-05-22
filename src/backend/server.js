@@ -8,7 +8,7 @@ const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
-const credentials = require('./middleware/credentials');
+const credentials = require('./middleodeare/credentials');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3000;
 

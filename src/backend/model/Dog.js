@@ -14,8 +14,8 @@ const dogSchema = new Schema({
         type: String,
         required: true
     },
-    image: {
-        type: Buffer,
+    img: {
+        type: String,
         required: true
         
     }

@@ -1,9 +1,5 @@
-import axios from 'axios';
-
-export default axios.create({
-  baseURL: 'http://localhost:3000'
-});import { useContext, useDebugValue } from "react";
-import AuthContext from "../context/AuthProvider";
+import { useContext, useDebugValue } from "react";
+import AuthContext from "../backend/context/AuthProvider";
 
 const useAuth = () => {
     const { auth } = useContext(AuthContext);

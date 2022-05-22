@@ -7,7 +7,7 @@ const getAllDogs = async (req, res) => {
 }
 
 const createNewDog = async (req, res) => {
-    if (!req?.body?.name || !req?.body?.breed || !req?.body?.location || !req?.body?.image) {
+    if (!req?.body?.name || !req?.body?.breed || !req?.body?.location || !req?.body?.img) {
         return res.status(400).json({ 'message': 'One or more fields are lacking' });
     }
 
@@ -16,7 +16,7 @@ const createNewDog = async (req, res) => {
            name: req.body.name,
            breed: req.body.breed,
            location: req.body.location,
-           image: req.body.image
+           img: req.body.img
         });
 
         res.status(201).json(result);
@@ -37,7 +37,7 @@ const updateDog = async (req, res) => {
     if (req.body?.name) dog.name = req.body.name;
     if (req.body?.breed) dog.breed = req.body.breed;
     if (req.body?.location) dog.location = req.body.location;
-    if (req.body?.image) dog.image = req.body.image;
+    if (req.body?.img) dog.img = req.body.img;
     const result = await dog.save();
     res.json(result);
 }

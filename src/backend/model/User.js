@@ -18,10 +18,6 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    staffcode: {
-        type: String,
-        required: false
-    },
     refreshToken: String
 });
 
