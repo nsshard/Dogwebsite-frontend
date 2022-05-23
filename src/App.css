@@ -162,6 +162,13 @@ font-size: 30px;
 top:350px;
 }
 
+.adddogimg {
+position: absolute;
+color: black;
+font-size: 25px;
+left:1500px;
+top:700px;
+}
 
 
 .form1 {

@@ -10,6 +10,7 @@ function Browsedogs() {
   const [data, getData] = useState([])
   const URL = 'http://localhost:3000/dogs';
 
+
   useEffect(() => {
       fetchData()
   }, [])
@@ -46,7 +47,7 @@ function Browsedogs() {
                       <td>{item.breed}</td>
                       <td>{item.location}</td>
                       <div className='imagesinsidetable'>
-                      <td><img class="img3" src={`./dogimages/${item.img}.jpg`}></img></td>
+                      <td><img class="img3" src={`http://localhost:3000/img/${item.img}.jpg`}></img></td>
                       </div>
                
                   </tr>
