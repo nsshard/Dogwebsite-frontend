@@ -372,11 +372,25 @@ position: absolute;
     top: 55px;
 }
 
+.managemsgbutton{
+ position: absolute;
+    width: 290px;
+    left: 885px;
+    top: 55px;
+}
+
 .deletedogbut{
  position: absolute;
     width: 290px;
     left: 775px;
     top: 55px;
+}
+
+.deletecommentbuttonin{
+ position: absolute;
+    width: 290px;
+    left: 40px;
+    top: 25px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
