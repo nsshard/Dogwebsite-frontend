@@ -4,6 +4,7 @@ const path = require('path');
 const Upload = async (req, res) => {
   try {
     await UploadFile(req, res);
+    
     if (req.file == undefined) {
       return res.status(400).send({ message: "You have not uploaded a image or your image is not in JPEG!!" });
     }
@@ -52,5 +53,5 @@ const Download = (req, res) => {
 module.exports = {
   Upload,
   GetListFiles,
-  Download
-}
+  Download,
+};

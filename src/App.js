@@ -7,6 +7,8 @@ import Login from "./login";
 import Register from "./register";
 import Admin from "./Admin";
 import Adminpanel from "./adminpanel";
+import Modifydogs from "./modifydogs";
+import Deletedogs from "./deletedogs";
 const handleRefreshToken = "./backend/controllers/refreshTokenController";
 
 
@@ -55,7 +57,21 @@ class App extends Component {
             <div className="adminpanel">
               <button type="button" className="btn btn-light btn-lg active">
                 <Link to={"/adminpanel"} className="nav-link">
-                Admin panel
+                Add dog
+                </Link>
+              </button>
+            </div>
+            <div className="modifydogbut">
+              <button type="button" className="btn btn-light btn-lg active">
+                <Link to={"/modifydogs"} className="nav-link">
+                  Modify dogs
+                </Link>
+              </button>
+            </div>
+            <div className="deletedogbut">
+              <button type="button" className="btn btn-light btn-lg active">
+                <Link to={"/deletedogs"} className="nav-link">
+                  Delete dogs
                 </Link>
               </button>
             </div>
@@ -67,6 +83,8 @@ class App extends Component {
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
           <Route path="/adminpanel" element={<Adminpanel/>} />
+          <Route path="/modifydogs" element={<Modifydogs/>} />
+          <Route path="/deletedogs" element={<Deletedogs/>} />
         </Routes>
       </Router>
     );

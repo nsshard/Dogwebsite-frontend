@@ -1,5 +1,15 @@
 const util = require("util");
 const multer = require("multer");
+const fs = require("fs");
+
+const MIME_TYPES = {
+  'image/jpg': 'jpg',
+  'image/jpeg': 'jpg',
+  'image/png': 'png',
+  'image/gif': 'gif',
+  
+};
+
 const maxSize = 2 * 1024 * 1024;
 let storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -14,5 +24,5 @@ let uploadFile = multer({
   storage: storage,
   limits: { fileSize: maxSize },
 }).single("file");
-let HandleImageUpload = util.promisify(uploadFile);
-module.exports = HandleImageUpload;
+let uploadFileMiddleware = util.promisify(uploadFile);
+module.exports = uploadFileMiddleware;

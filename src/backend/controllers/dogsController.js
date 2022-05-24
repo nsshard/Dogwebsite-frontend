@@ -43,7 +43,9 @@ const updateDog = async (req, res) => {
 }
 
 const deleteDog = async (req, res) => {
-    if (!req?.body?.id) return res.status(400).json({ 'message': 'Dog ID required.' });
+    if (!req?.body?.id) {
+        return res.status(400).json({ 'message': 'ID parameter is required.' });
+    }
 
     const dog = await Dog.findOne({ _id: req.body.id }).exec();
     if (!dog) {

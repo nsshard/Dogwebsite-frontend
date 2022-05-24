@@ -11,12 +11,23 @@ top:180px;
 left:1800px;
 }
 
+.scrolldownrem
+{
+position: absolute;
+top:500px;
+width:500px;
+
+}
+
 td, th {
    border: 1px solid #ddd;
    padding: 20px;
 font-size: 20px;
 font-weight: bold;
  }
+
+
+
 
 .img3 {
  width: 180px;
@@ -73,8 +84,36 @@ display: inline-block;
 
 }
 
+.textthingymod {
+position: absolute;
+  left: -250px;
+    top: -150px;
+display: inline-block;
+
+}
+
+.admindogsdisplay {
+position: absolute;
+  left: -1010px;
+    top: 300px;
+display: inline-block;
+}
+
+.loginstuffv4 {
+position: absolute;
+  left: 300px;
+    top: 350px;
+
+}
 
 .loginstuffv3 {
+position: absolute;
+  left: 850px;
+    top: 350px;
+
+}
+
+.loginstuffv5 {
 position: absolute;
   left: 850px;
     top: 350px;
@@ -101,6 +140,13 @@ position: absolute;
   left: 850px;
     top: 400px;
 
+}
+
+.blacktext0 {
+position: absolute;
+color:black;
+font-size: 30px;
+top:-150px;
 }
 
 .blacktext1 {
@@ -162,10 +208,23 @@ font-size: 30px;
 top:350px;
 }
 
+.deletedogbutton {
+position: absolute;
+color:black;
+font-size: 30px;
+top:10px;
+}
+
 .adddogimg {
 position: absolute;
 color: black;
 font-size: 25px;
+left:1500px;
+top:700px;
+}
+
+.adddogimg2 {
+position: absolute;
 left:1500px;
 top:700px;
 }
@@ -196,7 +255,7 @@ top:160px;
 .buttonrows {
 position: absolute;
     width: 300px;
-    left: 800px;
+    left: 550px;
     top: -200px;
 }
 
@@ -234,6 +293,20 @@ position: absolute;
  position: absolute;
     width: 290px;
     left: 575px;
+    top: 55px;
+}
+
+.modifydogbut{
+ position: absolute;
+    width: 290px;
+    left: 695px;
+    top: 55px;
+}
+
+.deletedogbut{
+ position: absolute;
+    width: 290px;
+    left: 855px;
     top: 55px;
 }
 

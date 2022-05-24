@@ -39,3 +39,23 @@
 20220523	17:24:13	75c1df92-d381-4a1f-89c3-a18c41912cd8	TypeError: res.Download is not a function
 20220523	17:28:48	469fe32c-c76d-442a-a16b-9a00939fe4df	TypeError: res.Download is not a function
 20220523	17:28:51	782786e8-4710-4cd1-bcf0-168aa4763748	TypeError: res.Download is not a function
+20220523	22:27:37	8f8fe425-7583-4934-813f-bbc65b98523d	SyntaxError: Unexpected token " in JSON at position 0
+20220523	23:21:50	5fc2fb03-7778-42b3-9259-0da78d4ffe05	SyntaxError: Unexpected token " in JSON at position 0
+20220523	23:22:07	cdf2aa33-89b9-45ca-bfa6-55f571788d36	SyntaxError: Unexpected token " in JSON at position 0
+20220524	14:05:53	28fb6397-e113-47c4-872a-4c7c0d7f1b06	Error: Not allowed by CORS
+20220524	14:05:53	9bb82d48-3de4-4c5b-a6b3-fb107f29b401	Error: Not allowed by CORS
+20220524	14:20:36	c8470d93-1add-4b65-8748-cb312339c47c	SyntaxError: Unexpected token , in JSON at position 171
+20220524	14:31:33	1dd83559-be24-4c8a-952c-b4d55d43bb9a	SyntaxError: Unexpected token } in JSON at position 173
+20220524	14:41:28	11339806-8387-4486-b1f3-b8fb31bee31a	SyntaxError: Unexpected token } in JSON at position 59
+20220524	14:43:37	29d21819-1d36-4fa8-909c-c400eef59730	SyntaxError: Unexpected token " in JSON at position 4
+20220524	14:43:47	c6a3e4c6-bf95-419a-b134-925245062c71	SyntaxError: Unexpected token : in JSON at position 9
+20220524	14:43:47	75b77ca0-2ff7-46c5-a7d2-b6089e31c41b	SyntaxError: Unexpected token : in JSON at position 9
+20220524	14:43:48	8f9cd214-a07c-4c64-bd48-b19420c7c0e0	SyntaxError: Unexpected token : in JSON at position 9
+20220524	14:43:55	a8269853-4a9d-47a7-aa17-a887d9b3d430	SyntaxError: Unexpected token : in JSON at position 18
+20220524	14:43:59	0e814951-3e68-4d68-9c9d-0b270a8195c3	SyntaxError: Unexpected token : in JSON at position 18
+20220524	14:47:03	fc635f3a-fae9-467c-8c32-15807358a5d6	SyntaxError: Unexpected token } in JSON at position 58
+20220524	14:47:04	bab9e67b-ca4f-4c7b-b3c0-5ebaa6e437ac	SyntaxError: Unexpected token } in JSON at position 58
+20220524	14:52:08	b3585022-e0be-44e9-8670-b9a0a49b6e3f	SyntaxError: Unexpected token ] in JSON at position 117
+20220524	14:52:15	921e01c8-c442-45c5-8204-613dfb9bfbdd	SyntaxError: Unexpected token ] in JSON at position 137
+20220524	14:52:16	2180cb07-c238-40e4-b97f-bec0e46bb276	SyntaxError: Unexpected token ] in JSON at position 137
+20220524	14:52:19	d21d9a1e-a825-48fb-89fa-9675b89cba16	SyntaxError: Unexpected token ] in JSON at position 137
