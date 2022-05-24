@@ -15,7 +15,6 @@ const Login = () => {
     const { setAuth } = useContext(AuthContext);
     const userRef = useRef();
     const errRef = useRef();
-
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
@@ -109,8 +108,10 @@ const Login = () => {
                         <button>Sign In</button>
                         </div>
                         </div>
+
+                        
                     </form>
-                  
+                    
                 </section>
             )}
         </>

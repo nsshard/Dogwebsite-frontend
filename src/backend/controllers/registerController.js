@@ -2,19 +2,23 @@ const User = require('../model/User');
 const bcrypt = require('bcrypt');
 
 
+//This script handles register actions
 
+
+//Send in user, password and staffcode in the request body
 const handleNewUser = async (req, res) => {
     const { user, pwd, staffcode } = req.body;
     if (!user || !pwd) return res.status(400).json({ 'message': 'Username and password are required.' });
 
-    // check for duplicate usernames in the db
+   
     const duplicate = await User.findOne({ username: user }).exec();
     if (duplicate) return res.sendStatus(409); 
     try {
-        //encrypt the password
+     
+        //Hashing password with bcrypt
         const hashedPwd = await bcrypt.hash(pwd, 10);
 
-        //create and store the new user
+      //create the user into DB
         const result = await User.create({
             "username": user,
             "password": hashedPwd,

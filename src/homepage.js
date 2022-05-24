@@ -1,9 +1,15 @@
-import React, { Component } from "react";
+import React, {useState, useEffect } from "react";
+import axios from './axios';
 import './App.css';
 
-class homepage extends Component {
-  render() {
-    return (
+function Homepage() {
+ 
+
+
+
+  return (
+<>
+  
 
 <div className="homepagestuff">
 <div>
@@ -22,8 +28,8 @@ The Canine Shelter of Hong Kong was formed in 1999, and our mission is formed on
 </div>
 
 
- );
-  }
+</>
+  );
 }
 
-export default homepage;
+export default Homepage;

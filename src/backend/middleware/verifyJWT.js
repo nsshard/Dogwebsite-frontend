@@ -11,8 +11,8 @@ const verifyJWT = (req, res, next) => {
         ACCESS_TOKEN_SECRET,
         (err, decoded) => {
             if (err) return res.sendStatus(403); 
-            req.user = decoded.UserInfo.username;
-            req.staffcode = decoded.UserInfo.staffcode;
+            req.user = decoded.username;
+            req.staffcode = decoded.staffcode;
             next();
         }
     );

@@ -11,6 +11,16 @@ top:180px;
 left:1800px;
 }
 
+.commentthingy
+{
+position: absolute;
+color:black;
+font-size: 30px;
+top:420px;
+left:720px;
+padding: 20px;
+}
+
 .scrolldownrem
 {
 position: absolute;
@@ -22,9 +32,18 @@ width:500px;
 td, th {
    border: 1px solid #ddd;
    padding: 20px;
-font-size: 20px;
+font-size: 18px;
 font-weight: bold;
  }
+
+.logoutbutton {
+position: absolute;
+font-size: 10px;
+font-weight: bold;
+left:600px;
+top:15px;
+ }
+
 
 
 
@@ -84,6 +103,23 @@ display: inline-block;
 
 }
 
+.addcommenttext {
+position: absolute;
+  left: 0px;
+    top: -150px;
+display: inline-block;
+
+}
+
+
+.addcommentbut {
+position: absolute;
+  left: 0px;
+    top: 150px;
+display: inline-block;
+
+}
+
 .textthingymod {
 position: absolute;
   left: -250px;
@@ -105,6 +141,15 @@ position: absolute;
     top: 350px;
 
 }
+
+.commentform {
+position: absolute;
+  left: 40px;
+    top: 350px;
+
+}
+
+
 
 .loginstuffv3 {
 position: absolute;
@@ -141,6 +186,22 @@ position: absolute;
     top: 400px;
 
 }
+
+.commentbox1 {
+position: absolute;
+color:black;
+font-size: 20px;
+top:-50px;
+}
+
+.commentbox2 {
+position: absolute;
+color:black;
+font-size: 20px;
+top:50px;
+}
+
+
 
 .blacktext0 {
 position: absolute;
@@ -269,7 +330,15 @@ position: absolute;
 .browsebut {
  position: absolute;
     width: 290px;
-    left: 160px;
+    left: 130px;
+    top: 55px;
+
+}
+
+.commentbut {
+ position: absolute;
+    width: 350px;
+    left:360px;
     top: 55px;
 
 }
@@ -277,7 +346,7 @@ position: absolute;
 .loginbut {
  position: absolute;
     width: 290px;
-    left:335px;
+    left:265px;
     top: 55px;
 
 }
@@ -285,28 +354,28 @@ position: absolute;
 .registerbut {
  position: absolute;
     width: 290px;
-    left: 445px;
+    left: 470px;
     top: 55px;
 }
 
 .adminpanel{
  position: absolute;
     width: 290px;
-    left: 575px;
+    left: 555px;
     top: 55px;
 }
 
 .modifydogbut{
  position: absolute;
     width: 290px;
-    left: 695px;
+    left: 655px;
     top: 55px;
 }
 
 .deletedogbut{
  position: absolute;
     width: 290px;
-    left: 855px;
+    left: 775px;
     top: 55px;
 }
 

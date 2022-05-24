@@ -59,3 +59,25 @@
 20220524	14:52:15	921e01c8-c442-45c5-8204-613dfb9bfbdd	SyntaxError: Unexpected token ] in JSON at position 137
 20220524	14:52:16	2180cb07-c238-40e4-b97f-bec0e46bb276	SyntaxError: Unexpected token ] in JSON at position 137
 20220524	14:52:19	d21d9a1e-a825-48fb-89fa-9675b89cba16	SyntaxError: Unexpected token ] in JSON at position 137
+20220524	22:40:44	41b9c73a-b607-4662-a4ef-737587c942e4	TypeError: res.Cookie is not a function
+20220524	22:40:44	feabaaec-2b53-41f7-aa57-0c0a563a8f99	TypeError: res.Cookie is not a function
+20220524	22:40:45	4514ea8f-cf69-4ed7-9721-4a958d0330fc	TypeError: res.Cookie is not a function
+20220524	22:53:09	7c706cf3-12b9-498a-b980-87834c3c8015	Error: Cannot set headers after they are sent to the client
+20220524	22:53:09	2dfa7f8c-6c0e-4cb4-956d-f9b7136325c8	Error: Cannot set headers after they are sent to the client
+20220524	22:53:10	4f8f79dc-295a-4819-9f43-994e5f725a07	Error: Cannot set headers after they are sent to the client
+20220524	22:55:48	25e3d9ce-96d1-4bab-b851-f6e259a13be9	Error: Cannot set headers after they are sent to the client
+20220524	22:56:43	38821236-7bbe-4f09-82e3-825ef4ba5e93	Error: Cannot set headers after they are sent to the client
+20220524	22:56:56	334d197d-9538-4010-ae50-aad377548bb3	Error: Cannot set headers after they are sent to the client
+20220524	23:50:58	9c9e3dc4-02d3-401b-9e2d-6475d74180b3	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220524	23:51:50	0fb33575-c666-42e4-9c8a-a46ee79a9223	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220524	23:53:03	3038c678-eda4-46de-b033-3b0e63b29252	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220524	23:54:23	d64e4059-6df0-4a8f-8219-16067ed598fc	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220524	23:55:59	0d29b26a-d347-47fa-8dca-d2ca5edf2970	ReferenceError: jwtdecode is not defined
+20220524	23:56:18	f891f877-6490-443a-a6c6-90be97968374	ReferenceError: jwtdecode is not defined
+20220524	23:56:24	0256330d-24bb-42d4-bcd7-96bf868dc461	TypeError: jwt_decode is not a function
+20220524	23:57:03	b9e5e5c8-77f2-4ad1-a56c-d688054366bf	TypeError: jwt_decode is not a function
+20220524	23:57:50	e2b6afc9-5dcc-4617-ad86-7488b79eb651	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220524	23:58:11	1fc4407a-1119-423b-8d1e-205fdc6ec74f	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220524	23:58:17	54934c5b-db9f-43d2-8be0-c1ef8b97a61d	TypeError: jwt_decode is not a function
+20220525	00:08:01	377565ca-6b06-470b-b747-571352c02a8a	ReferenceError: window is not defined
+20220525	00:08:09	7af1da33-9eac-4e5d-9727-e68f48218f8f	ReferenceError: window is not defined

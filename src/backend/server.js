@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cors = require('cors');
+
 const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
@@ -30,13 +31,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/', require('./routes/root'));
-app.use('/register', require('./routes/register'));
-app.use('/auth', require('./routes/auth'));
-app.use('/refresh', require('./routes/refresh'));
-app.use('/logout', require('./routes/logout'));
+app.use('/register', require('./routes/api/register'));
+app.use('/auth', require('./routes/api/auth'));
+app.use('/logout', require('./routes/api/logout'));
 app.use('/dogs', require('./routes/api/dogs'));
 app.use('/users', require('./routes/api/users'));
 app.use('/img', require('./routes/api/imageAPI'));
+app.use('/comments', require('./routes/api/comments'));
 
 app.all('*', (req, res) => {
     res.status(404);
