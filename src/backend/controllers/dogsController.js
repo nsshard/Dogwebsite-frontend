@@ -55,20 +55,56 @@ const deleteDog = async (req, res) => {
     res.json(result);
 }
 
-const getDog = async (req, res) => {
+const getDogID = async (req, res) => {
     if (!req?.params?.id) return res.status(400).json({ 'message': 'Dog ID required.' });
 
-    const dog = await Dog.findOne({ _id: req.params.id }).exec();
+    const dog = await Dog.find({ _id: req.params.id }).exec();
     if (!dog) {
         return res.status(204).json({ "message": `No dog matches ID ${req.params.id}.` });
     }
     res.json(dog);
 }
 
+const getDogName = async (req, res) => {
+    if (!req?.params?.name) return res.status(400).json({ 'message': 'Dog Name required.' });
+
+    const dog = await Dog.find({ name: req.params.name }).exec();
+    if (!dog) {
+        return res.status(204).json({ "message": `No dog matches Name ${req.params.name}.` });
+    }
+    res.json(dog);
+}
+
+
+const getDogBreed = async (req, res) => {
+    if (!req?.params?.breed) return res.status(400).json({ 'message': 'Dog Breed required.' });
+
+    const dog = await Dog.find({ breed: req.params.breed }).exec();
+    if (!dog) {
+        return res.status(204).json({ "message": `No dog matches breed ${req.params.breed}.` });
+    }
+    res.json(dog);
+}
+
+const getDogLocation = async (req, res) => {
+    if (!req?.params?.location) return res.status(400).json({ 'message': 'Dog location required.' });
+
+    const dog = await Dog.find({ location: req.params.location }).exec();
+    if (!dog) {
+        return res.status(204).json({ "message": `No dog matches location ${req.params.location}.` });
+    }
+    res.json(dog);
+}
+
+
+
 module.exports = {
     getAllDogs,
     createNewDog,
     updateDog,
     deleteDog,
-    getDog
+    getDogID,
+  getDogName,
+  getDogBreed,
+  getDogLocation
 }

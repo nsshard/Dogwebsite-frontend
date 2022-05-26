@@ -81,3 +81,6 @@
 20220524	23:58:17	54934c5b-db9f-43d2-8be0-c1ef8b97a61d	TypeError: jwt_decode is not a function
 20220525	00:08:01	377565ca-6b06-470b-b747-571352c02a8a	ReferenceError: window is not defined
 20220525	00:08:09	7af1da33-9eac-4e5d-9727-e68f48218f8f	ReferenceError: window is not defined
+20220525	22:06:29	b4998ff6-0af4-4b13-ba51-268ad72d3f15	Error: Not allowed by CORS
+20220525	22:06:29	1fea530c-2c77-4258-bc21-b19613162007	Error: Not allowed by CORS
+20220526	00:18:22	6d8e84f7-93dc-459d-bef0-ca5f0f584166	Error: Not allowed by CORS

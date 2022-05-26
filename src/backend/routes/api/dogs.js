@@ -10,7 +10,16 @@ router.route('/')
     .put(dogsController.updateDog)
     .delete(dogsController.deleteDog);
 
-router.route('/:id')
-    .get(dogsController.getDog);
+router.route('/dogid'+'/:id')
+    .get(dogsController.getDogID);
+
+    router.route('/dogname'+'/:name')
+    .get(dogsController.getDogName);
+
+    router.route('/dogbreed'+'/:breed')
+    .get(dogsController.getDogBreed);
+
+    router.route('/doglocation'+'/:location')
+    .get(dogsController.getDogLocation);
 
 module.exports = router;
