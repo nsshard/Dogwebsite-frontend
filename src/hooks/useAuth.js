@@ -1,9 +1,10 @@
-import { useContext, useDebugValue } from "react";
+import { useContext } from "react";
 import AuthContext from "../backend/context/AuthProvider";
-
+/**
+ * Auth router
+ * 
+ */
 const useAuth = () => {
-    const { auth } = useContext(AuthContext);
-    useDebugValue(auth, auth => auth?.user ? "Logged In" : "Logged Out")
     return useContext(AuthContext);
 }
 

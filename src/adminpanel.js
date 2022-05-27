@@ -1,16 +1,25 @@
 import "./App.css";
 import React, { useRef, useState, useEffect } from "react";
 import axios from "./axios";
-import useRefreshToken from "./hooks/useRefreshToken";
-import useAxiosPrivate from "./hooks/useAxiosPrivate";
+
 import ImageUploading from 'react-images-uploading';
 const DOG_URL = "/dogs";
 const DOG_IMG_URL = "http://localhost:3000/img/${item.img}.jpg";
 
-
+/**
+ * Main module enclosing everything
+ * 
+ */
 function Adminpanel() {
-  const axiosPrivate = useAxiosPrivate();
-
+  
+/**
+ * Variables. 
+ * Name: Username
+ * breed: Breed of pet
+ * location: Location of pet store
+ * Image: Image string of pet
+ *
+ */
   const userRef = useRef();
   const errRef = useRef();
   const [errMsg, setErrMsg] = useState("");
@@ -38,22 +47,14 @@ function Adminpanel() {
   };
 
 
-   /* const onImageUploadToServer = () => { 
-    axios({
-        method:'post',
-        url:'http://localhost:3000/img',
-        headers: {
-            'Content-Type': images
-          }
-         
-    });
-    setImages();
-    alert(ImageUploading.dataURLKey);
+/**
+ * Button stuff
+ * 
+ */
+  const refresh = () => {
   }
-    */  
-    
 
-  const refresh = useRefreshToken();
+
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -62,18 +63,25 @@ function Adminpanel() {
     setErrMsg("");
   }, [name, breed, location, img]);
 
+ 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
+
+   /**
+ * Function to submit the form.
+ * 
+ */
 
     try {
       const response = await axios.post(
         DOG_URL,
         JSON.stringify({ name, breed, location, img }),
         {
-          headers: { "Content-Type": "application/json" },
-          withCredentials: true
+          headers: { "Content-Type": "application/json",
+          withCredentials: true,
+          },
+          
         }
       );
 
@@ -91,7 +99,10 @@ function Adminpanel() {
     }
   };
 
-
+/**
+ * Function to change image.
+ * 
+ */
   const onChangeImg = e => {
     setFile(e.target.files[0]);
     setFilename(e.target.files[0].name);
@@ -132,6 +143,10 @@ function Adminpanel() {
     fetchData();
   }, []);
 
+/**
+ * Fetches data and gets list of pets.
+ * 
+ */
   const fetchData = () => {
     fetch(URL)
       .then((res) => res.json())
@@ -149,7 +164,7 @@ function Adminpanel() {
       {success ? (
         <section>
           <br></br>
-          <h1>Dog successfully created!</h1>
+          <h1>Server has returned response. Check HTTP response</h1>
         </section>
       ) : (
         <section>

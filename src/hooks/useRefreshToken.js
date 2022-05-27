@@ -1,6 +1,9 @@
 import axios from '../axios';
 import useAuth from './useAuth';
-
+/**
+ * page to refresh tokens, modified to access token. Obsolete.
+ * 
+ */
 const useRefreshToken = () => {
     const { setAuth } = useAuth();
 

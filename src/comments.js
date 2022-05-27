@@ -1,10 +1,15 @@
 import React, {useRef,useState, useEffect } from "react";
 import axios from './axios';
 import './App.css';
-import useRefreshToken from "./hooks/useRefreshToken";
-import useAxiosPrivate from "./hooks/useAxiosPrivate";
+/**
+ * Comments page
+ * 
+ */
 function Comments() {
-
+/**
+ * Variables 
+ * 
+ */
   const [success, setSuccess] = useState(false);
   const userRef = useRef();
   const errRef = useRef();
@@ -13,7 +18,18 @@ function Comments() {
   const [name, setName] = useState("");
   const [commentmsg, setCommentmsg] = useState("");
   const URL = 'http://localhost:3000/comments';
-  const refresh = useRefreshToken();
+
+  /**
+ * Empty function for onClick in button use
+ * 
+ */
+  const refresh = () => {}
+
+  /**
+ * Updates the fields
+ * 
+ */
+  
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -22,11 +38,17 @@ function Comments() {
     setErrMsg("");
   }, [name, commentmsg]);
 
-
+/**
+ * Submit function for the form, prevents default
+ * 
+ */
   const handleSubmit = async (e) => {
     e.preventDefault();
    
-
+/**
+ * Try to post a comment
+ * 
+ */
     try {
       const response = await axios.post(
         URL,
@@ -49,7 +71,10 @@ function Comments() {
       errRef.current.focus();
     }
   };
-
+/**
+ * The below functions retrieve list of comments
+ * 
+ */
   useEffect(() => {
       fetchData()
   }, [])

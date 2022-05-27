@@ -3,8 +3,16 @@ import axios from './axios';
 import './App.css';
 import useRefreshToken from "./hooks/useRefreshToken";
 import useAxiosPrivate from "./hooks/useAxiosPrivate";
-function Managemsg() {
 
+/**
+ * Delete msg page
+ * 
+ */
+function Managemsg() {
+/**
+ * Variables
+ * 
+ */
   const [success, setSuccess] = useState(false);
   const userRef = useRef();
   const errRef = useRef();
@@ -22,11 +30,17 @@ function Managemsg() {
     setErrMsg("");
   }, [id]);
 
-
+/**
+ * submit function, prevents default
+ * 
+ */
   const handleSubmit = async (e) => {
     e.preventDefault();
    
-
+/**
+ * delete a comment based on ID
+ * 
+ */
     try {
       const response = await axios.delete(
         URL,
@@ -44,7 +58,10 @@ function Managemsg() {
       errRef.current.focus();
     }
   };
-
+/**
+ * fetch comments from db
+ * 
+ */
   useEffect(() => {
       fetchData()
   }, [])

@@ -1,7 +1,10 @@
 import React, {useState, useEffect } from "react";
 import axios from './axios';
 import './App.css';
-
+/**
+ * This place display homepage, not much functions are there, just react components
+ * 
+ */
 function Homepage() {
  
 

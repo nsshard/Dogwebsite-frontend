@@ -1,5 +1,10 @@
 const allowedOrigins = require('../config/allowedOrigins');
 
+
+/**
+ * Makes it so credentials are allowed on CORS
+ * 
+ */
 const credentials = (req, res, next) => {
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {

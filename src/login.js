@@ -1,25 +1,29 @@
 
 import  { useRef, useState, useEffect, useContext, Component } from "react";
-import AuthContext from "./backend/context/AuthProvider"; 
+import useAuth from './hooks/useAuth';
 import "./App.css";
 import axios from './axios';
-//const axios = require('axios').default;
-//Security stuff, declaring salt and SHA256. 
-//var salt = '2irjv34vawirj2jwjvwjreka';
-//var SHA256 = require("crypto-js/sha256");
-// Add salt, then HASH it using SHA256.
-// Looks for the target with the user typed name
 const LOGIN_URL = '/auth';
-
+/**
+ * Login page
+ * 
+ */
 const Login = () => {
-    const { setAuth } = useContext(AuthContext);
+/**
+ * Variables
+ * 
+ */
+    const { setAuth } = useAuth();
     const userRef = useRef();
     const errRef = useRef();
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
-
+/**
+ * Update text fields based on user and password, so it can be used to be sent as a body to database
+ * 
+ */
     useEffect(() => {
         userRef.current.focus();
     }, [])
@@ -30,7 +34,10 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+/**
+ *Post with axios to the database and compare the username and password
+ * 
+ */
         try {
             const response = await axios.post(LOGIN_URL,
                 JSON.stringify({ user, pwd }),
@@ -41,9 +48,13 @@ const Login = () => {
             );
             console.log(JSON.stringify(response?.data));
             //console.log(JSON.stringify(response));
+/**
+ * Get accesstoken from the backend
+ * 
+ */
             const accessToken = response?.data?.accessToken;
             const roles = response?.data?.roles;
-            setAuth({ user, pwd, roles, accessToken });
+            setAuth({ user, pwd, accessToken });
             setUser('');
             setPwd('');
             setSuccess(true);

@@ -1,7 +1,10 @@
 const util = require("util");
 const multer = require("multer");
 const fs = require("fs");
-
+/**
+ * Handles image uploads. Mime types is what formats are supported.
+ * 
+ */
 const MIME_TYPES = {
   'image/jpg': 'jpg',
   'image/jpeg': 'jpg',
@@ -9,6 +12,11 @@ const MIME_TYPES = {
   'image/gif': 'gif',
   
 };
+
+/**
+ * Limit image size
+ * 
+ */
 
 const maxSize = 2 * 1024 * 1024;
 let storage = multer.diskStorage({
@@ -20,6 +28,11 @@ let storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
+
+/**
+ * Using multer to store the image into the src img folder.
+ * 
+ */
 let uploadFile = multer({
   storage: storage,
   limits: { fileSize: maxSize },

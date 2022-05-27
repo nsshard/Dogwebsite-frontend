@@ -3,7 +3,10 @@ import "./App.css";
 import axios from './axios';
 const REGISTER_URL = '/register';
 
-
+/**
+ * register account page
+ * 
+ */
 const Register = () => {
     const userRef = useRef();
     const errRef = useRef();
@@ -19,13 +22,20 @@ const Register = () => {
     }, [])
 
     
-
+/**
+ * update text field to be used
+ * 
+ */
     useEffect(() => {
         setErrMsg('');
     }, [user, pwd, staffcode])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        /**
+ * notify the user of their input values
+ * 
+ */
         alert('You have input in '+[user]+' as username');
         alert('You have input in '+[pwd]+' as password');
         alert('You have input in '+[staffcode]+' as staffcode');

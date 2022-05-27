@@ -1,0 +1,570 @@
+swagger: "2.0"
+info:
+  description: "This is The Canine Shelter"
+  version: "1.0.0"
+  title: "The Canine Shelter"
+  contact:
+    email: "therealdude12@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:3000"
+basePath: "/"
+tags:
+- name: "Dogs"
+  description: "Information about dogs"
+  
+- name: "Images"
+  description: "Media like dog images"
+  
+- name: "Comments"
+  description: "Get, delete and post comments"
+  
+- name: "Users"
+  description: "Deals with authentication, login, register etc"
+
+
+schemes:
+- "https"
+- "http"
+paths:
+  /dogs:
+    post:
+      tags:
+      - "Dogs"
+      summary: "Create new dog"
+      description: ""
+      operationId: "createNewDog"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Add a new dog to the store"
+        required: true
+        schema:
+          $ref: "#/definitions/Dogs"
+      responses:
+        "400":
+          description: "One or more fields are lacking"
+        "201":
+          description: "Success"
+          
+    get:
+      tags:
+      - "Dogs"
+      summary: "Get a list of all of dogs"
+      description: ""
+      operationId: "getAllDogs"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get all dogs for use and display them on frontend"
+        required: false
+        schema:
+          $ref: "#/definitions/Dogs"
+      responses:
+        "204":
+          description: "No dogs found."
+  /dogs/id: 
+    put:
+      tags:
+      - "Dogs"
+      summary: "Update a dog by ID"
+      description: ""
+      operationId: "updateDog"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Update a dog"
+        required: true
+        schema:
+          $ref: "#/definitions/Dogs"
+      responses:
+        "400":
+          description: "ID parameter is required."
+        "204":
+          description: "No dog matches ID ${req.body.id}."   
+      
+    delete:
+      tags:
+      - "Dogs"
+      summary: "Delete a dog by ID"
+      description: ""
+      operationId: "deleteDog"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Delete a dog"
+        required: true
+        schema:
+          $ref: "#/definitions/Dogs"
+      responses:
+        "400":
+          description: "ID parameter is required."
+        "204":
+          description: "No dog matches ID ${req.body.id}."   
+  /dogs/dogid/id:
+    get:
+      tags:
+      - "Dogs"
+      summary: "Get a dog by ID"
+      description: ""
+      operationId: "getDogID"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get a dog by ID"
+        required: true
+        schema:
+          $ref: "#/definitions/Dogs"
+      responses:
+        "400":
+          description: "Dog ID required."
+        "204":
+          description: "No dog matches ID ${req.params.id}."     
+
+  /dogs/dogname/name:
+    get:
+      tags:
+      - "Dogs"
+      summary: "Get a dog by name"
+      description: ""
+      operationId: "getDogName"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get dog by name"
+        required: true
+        schema:
+          $ref: "#/definitions/Dogs"
+      responses:
+        "400":
+          description: "Dog name required."
+        "204":
+          description: "No dog matches name ${req.params.name}."     
+
+  /dogs/dogbreed/breed:
+    get:
+      tags:
+      - "Dogs"
+      summary: "Get a dog by breed"
+      description: ""
+      operationId: "getDogBreed"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get dog by breed"
+        required: true
+        schema:
+          $ref: "#/definitions/Dogs"
+      responses:
+        "400":
+          description: "Dog breed required."
+        "204":
+          description: "No dog matches breed ${req.params.breed}."     
+  /dogs/doglocation/location:
+    get:
+      tags:
+      - "Dogs"
+      summary: "Get a dog by location"
+      description: ""
+      operationId: "getDogLocation"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get dog by location"
+        required: true
+        schema:
+          $ref: "#/definitions/Dogs"
+      responses:
+        "400":
+          description: "Dog location required."
+        "204":
+          description: "No dog matches location ${req.params.location}."     
+
+  /img:
+    post:
+      tags:
+      - "Images"
+      summary: "Upload a image to src/img folder, with image's name handled by multer"
+      description: ""
+      operationId: "Upload"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Upload a image"
+        required: true
+        schema:
+          $ref: "#/definitions/Images"
+      responses:
+        "400":
+          description: "You have not uploaded a image or your image is not in JPEG!!"
+        "200":
+          description: "Uploaded image successfully! Name: + req.file.originalname"     
+        "500":
+          description: "Error, could not upload the file: ${req.file.originalname}. ${err}"     
+          
+    get:
+      tags:
+      - "Images"
+      summary: "Get list of images with their URL and names"
+      description: ""
+      operationId: "GetListFiles"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get images"
+        required: false
+        schema:
+          $ref: "#/definitions/Images"
+      responses:
+        "200":
+          description: "success"
+        "500":
+          description: "Unable to scan files!"    
+          
+  /img/name:
+    get:
+      tags:
+      - "Images"
+      summary: "Download image so it can be displayed into frontend"
+      description: ""
+      operationId: "Download"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Download images"
+        required: false
+        schema:
+          $ref: "#/definitions/Images"
+      responses:
+        "500":
+          description: "Could not download the file. + err"
+  /comments:
+    get:
+      tags:
+      - "Comments"
+      summary: "Get and display all comments"
+      description: ""
+      operationId: "getAllCommentmsgs"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get and display comments"
+        required: false
+        schema:
+          $ref: "#/definitions/Comments"
+      responses:
+        "204":
+          description: "No comments found."
+          
+    post:
+      tags:
+      - "Comments"
+      summary: "Create a comment"
+      description: ""
+      operationId: "createNewCommentmsg"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Create comment"
+        required: true
+        schema:
+          $ref: "#/definitions/Comments"
+      responses:
+        "400":
+          description: "One or more fields are lacking."    
+        "201":
+          description: "success"       
+  /comments/id:        
+    delete:
+      tags:
+      - "Comments"
+      summary: "Delete a comment"
+      description: ""
+      operationId: "deleteCommentmsg"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Delete a comment"
+        required: true
+        schema:
+          $ref: "#/definitions/Comments"
+      responses:
+        "400":
+          description: "One or more fields are lacking."    
+        "204":
+          description: "No comment matches ID ${req.body.id}."
+          
+  /users:
+    get:
+      tags:
+      - "Users"
+      summary: "Get and display all users, useful for admins"
+      description: ""
+      operationId: "getAllUsers"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get and display all users, useful for admins"
+        required: false
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "204":
+          description: "No users found"        
+          
+  /users/id:
+  
+          
+    get:
+      tags:
+      - "Users"
+      summary: "Get user by id"
+      description: ""
+      operationId: "getUser"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get user by id"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "400":
+          description: "User ID required"                
+        "204":
+          description: "User ID ${req.body.id} not found"       
+    delete:
+      tags:
+      - "Users"
+      summary: "Get and display all users, useful for admins"
+      description: ""
+      operationId: "deleteUser"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get and display all users, useful for admins"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "400":
+          description: "User ID required"                
+        "204":
+          description: "User ID ${req.body.id} not found"         
+
+  /logout:          
+    get:
+      tags:
+      - "Users"
+      summary: "Going to this page deletes all JWT cookies stored in the browser"
+      description: ""
+      operationId: "DeleteCookie"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Delete jwt cookies"
+        required: false
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "200":
+          description: "Cookie cleared!"
+          
+  /register:
+  
+    post:
+      tags:
+      - "Users"
+      summary: "Make a new user, handled with encryption "
+      description: ""
+      operationId: "handleNewUser"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Make a new user, also checks for name duplication and if the user has put in his username/password"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "400":
+          description: "Username and password are required."      
+        "409":
+          description: "Username duplication"
+        "201":
+          description: "New user ${user} created!"   
+        "500":
+          description: "message': err.message"   
+  /auth:
+    post:
+      tags:
+      - "Users"
+      summary: "Login system with a authenciator that gives the user a JWT"
+      description: ""
+      operationId: "handleLogin"
+      consumes:
+      - "application/json"
+
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Gives people a JWT"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "400":
+          description: "Username and password are required."      
+        "401":
+          description: "User does not exist or error"
+          
+definitions:
+  Dogs:
+    type: "object"
+    properties:
+      _id:
+       type: "object"
+       
+      name:
+        type: "string"
+    
+      breed:
+        type: "string"
+    
+      location:
+        type: "string"
+      
+      img:
+        type: "string"
+        
+  Images:
+    type: "object"
+    properties:
+      originalname:
+       format: "originalname"
+    
+  User:
+    type: "object"
+    properties:
+      _id:
+        type: "object"
+       
+      username:
+        type: "string"
+    
+      password:
+        type: "string"
+    
+      staffcode:
+        type: "string"
+        
+  Comments:
+    type: "object"
+    properties:
+      _id:
+        type: "string"
+       
+      name:
+        type: "string"
+    
+      commentmsg:
+        type: "string"
+  
+ 

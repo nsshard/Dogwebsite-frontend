@@ -1,16 +1,21 @@
 import "./App.css";
 import React, { useRef, useState, useEffect } from "react";
 import axios from "./axios";
-import useRefreshToken from "./hooks/useRefreshToken";
-import useAxiosPrivate from "./hooks/useAxiosPrivate";
+
 import ImageUploading from 'react-images-uploading';
 const DOG_URL = "/dogs";
 const DOG_IMG_URL = "http://localhost:3000/img/${item.img}.jpg";
-
+/**
+ * modify dog page
+ * 
+ */
 
 function Modifydogs() {
-  const axiosPrivate = useAxiosPrivate();
 
+/**
+ * Variables
+ * 
+ */
   const userRef = useRef();
   const errRef = useRef();
   const [errMsg, setErrMsg] = useState("");
@@ -39,50 +44,53 @@ function Modifydogs() {
   };
 
 
-   /* const onImageUploadToServer = () => { 
-    axios({
-        method:'post',
-        url:'http://localhost:3000/img',
-        headers: {
-            'Content-Type': images
-          }
-         
-    });
-    setImages();
-    alert(ImageUploading.dataURLKey);
-  }
-    */  
     
-
-  const refresh = useRefreshToken();
+/**
+ * empty function for button onClick
+ * 
+ */
+  const refresh = () => {}
   useEffect(() => {
     userRef.current.focus();
   }, []);
 
+  /**
+ * updates text fields so they can be sent as a body
+ * 
+ */
   useEffect(() => {
     setErrMsg("");
   }, [id, name, breed, location]);
 
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
    
-
+/**
+ * PUT the updated data into the server
+ * 
+ */
     try {
       const response = await axios.put(
         DOG_URL,
         JSON.stringify({ id, name, breed, location }),
         {
-          headers: { "Content-Type": "application/json" },
-          withCredentials: true
+          headers: { 
+            
+            "Content-Type": "application/json",
+             withCredentials: true },
+             
+         
         }
       );
+      
 
       setId("");
       setName("");
       setBreed("");
       setLocation("");
-   
+      
       setSuccess(true);
 
     } catch (err) {
@@ -129,7 +137,10 @@ function Modifydogs() {
     
     }
   }
-
+/**
+ * fetch dogs
+ * 
+ */
   useEffect(() => {
     fetchData();
   }, []);

@@ -1,16 +1,19 @@
 import "./App.css";
 import React, { useRef, useState, useEffect } from "react";
 import axios from "./axios";
-import useRefreshToken from "./hooks/useRefreshToken";
-import useAxiosPrivate from "./hooks/useAxiosPrivate";
 import ImageUploading from 'react-images-uploading';
 const DOG_URL = "/dogs";
 const DOG_IMG_URL = "http://localhost:3000/img/${item.img}.jpg";
 
-
+/**
+ * Delete dog page
+ * 
+ */
 function Deletedogs() {
-  const axiosPrivate = useAxiosPrivate();
-
+/**
+ * Variables
+ * 
+ */
   const userRef = useRef();
   const errRef = useRef();
   const [errMsg, setErrMsg] = useState("");
@@ -38,23 +41,12 @@ function Deletedogs() {
    
   };
 
-
-   /* const onImageUploadToServer = () => { 
-    axios({
-        method:'post',
-        url:'http://localhost:3000/img',
-        headers: {
-            'Content-Type': images
-          }
-         
-    });
-    setImages();
-    alert(ImageUploading.dataURLKey);
-  }
-    */  
     
-
-  const refresh = useRefreshToken();
+/**
+ * Empty function for onClick on buttons
+ * 
+ */
+  const refresh = () => {}
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -63,10 +55,16 @@ function Deletedogs() {
     setErrMsg("");
   }, [id]);
 
-
+/**
+ * Submit function, prevents default
+ * 
+ */
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
+   /**
+ * Try to delete a comment bsaed on ID
+ * 
+ */
     try {
       const response = await axios.delete(
         DOG_URL,
@@ -86,42 +84,10 @@ function Deletedogs() {
     }
   };
 
-
-  const onChangeImg = e => {
-    setFile(e.target.files[0]);
-    setFilename(e.target.files[0].name);
-  };
-
-  const onSubmit = async e => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('file', file);
-
-    try {
-      const res = await axios.post('/img', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      
-      })
-      ;
-      alert("Image succesfully sent. Please copy "+ `${filename} ` + " (without space and .JPG)" + " into Image:");
-
-
-      const { fileName, filePath } = res.data;
-
-      setUploadedFile({ fileName, filePath });
-
-    
-    } catch (err) {
-      if (err.response.status === 500) {
-        console.log("server error");
-      } else {
-        console.log("other error");
-      }
-    
-    }
-  }
+/**
+ * Fetch dog data
+ * 
+ */
 
   useEffect(() => {
     fetchData();

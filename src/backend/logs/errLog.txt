@@ -84,3 +84,67 @@
 20220525	22:06:29	b4998ff6-0af4-4b13-ba51-268ad72d3f15	Error: Not allowed by CORS
 20220525	22:06:29	1fea530c-2c77-4258-bc21-b19613162007	Error: Not allowed by CORS
 20220526	00:18:22	6d8e84f7-93dc-459d-bef0-ca5f0f584166	Error: Not allowed by CORS
+20220526	18:01:22	f20eb715-7fb3-4fa4-b7f0-6377de68b6fc	TypeError: Cannot read properties of undefined (reading 'split')
+20220526	18:06:57	5da27f7f-6dd9-4005-9a69-3ba1d753f61d	TypeError: Cannot read properties of undefined (reading 'replace')
+20220526	21:07:45	0dda610e-dc7a-4260-b169-fe4008e2ed40	ReferenceError: authHeader is not defined
+20220526	21:09:57	7355bb27-1449-4779-9b80-3565d4110f8f	ReferenceError: authHeader is not defined
+20220526	21:10:06	71ae1bff-8113-45fe-adf5-19835a2710cd	ReferenceError: authHeader is not defined
+20220526	21:10:06	063dbc17-b070-4f03-8e2b-a6864325f410	ReferenceError: authHeader is not defined
+20220526	21:10:06	9331a2e7-391e-4b07-8f56-aaccca091b19	ReferenceError: authHeader is not defined
+20220526	21:10:55	94c10638-89b4-4989-a4bc-98e1e014edca	ReferenceError: authHeader is not defined
+20220526	21:11:19	18a27d84-0c39-42bd-93ee-397fc3ccb40b	TypeError: authHeader.split is not a function
+20220526	21:11:47	ce3b95f8-d816-45ba-906f-6f80e7ffd2a2	TypeError: req.headers.split is not a function
+20220526	21:14:50	3785f087-d965-4768-a68f-6fd79e0842e6	TypeError: req.headers.split is not a function
+20220526	21:18:00	5164b827-e90b-4030-99f9-16f04e824cbe	TypeError: Cannot read properties of undefined (reading '1')
+20220526	21:18:12	f58529ca-8996-4370-a68a-3defab1b21d2	TypeError: Cannot read properties of undefined (reading '1')
+20220526	21:18:43	91790716-cf1e-4a58-a651-5f6e8ccd0a6f	TypeError: req.headers is not a function
+20220526	21:20:24	f933cd81-4a6c-4726-92a1-b4c14f98f7ae	TypeError: Cannot read properties of undefined (reading '1')
+20220526	21:21:14	3082c8cb-b7b4-43f6-868a-e50ee691f070	TypeError: Cannot read properties of undefined (reading '1')
+20220526	21:21:38	ff2c1603-6a76-4c98-a576-a1a731633694	TypeError: Cannot read properties of undefined (reading '1')
+20220526	21:27:21	26742a38-6d01-45ed-8643-3813f46c26b7	TypeError: Cannot read properties of undefined (reading 'split')
+20220526	21:28:41	868035c8-6897-4695-a965-9fb5615198a6	TypeError: Cannot read properties of undefined (reading 'split')
+20220526	21:29:17	6c634ef7-020d-40cd-a41b-499785f3284d	TypeError: authHeader.split is not a function
+20220526	21:38:06	6e3be242-b58f-449b-8a62-b36bf1769e34	TypeError: Cannot read properties of undefined (reading 'split')
+20220526	22:47:09	e6b01e4b-b311-43fe-8690-b55ff29b50ab	ReferenceError: checkAuthorization is not defined
+20220526	22:48:33	696c2ff5-cb4b-4467-bfc6-7192e9c9d57b	Error: Permission denied.
+20220526	22:49:04	88096bc9-c2e6-4ba2-9814-da1f6d2b1641	Error: Permission denied.
+20220526	22:49:39	54ab9972-acd9-4eb4-bec3-1548a18526ce	ReferenceError: request is not defined
+20220526	22:49:41	767380bf-3533-4b43-93bf-c0fd9c5dc28a	ReferenceError: request is not defined
+20220526	22:49:41	3dd3d574-0171-4081-972c-52924a58f9e3	ReferenceError: request is not defined
+20220526	22:49:43	0ef6c043-d5ef-4c1b-a22c-b71f6ed665b5	ReferenceError: request is not defined
+20220526	22:49:56	3699b3c7-2b0f-4407-a90c-497e38732c9d	TypeError: Cannot read properties of undefined (reading 'isAdmin')
+20220526	22:58:42	81d1b60e-df5e-4507-a6d1-96dd86fa4fc7	TypeError: authHeader?.startsWith is not a function
+20220526	23:08:18	f99b8de9-8f6b-45c2-87c1-e59a011d38ef	Error: You are not authorized to perform this operation!
+20220526	23:08:38	7459239d-0960-4348-8b32-34e4ceef9bec	Error: You are not authorized to perform this operation!
+20220526	23:08:43	8c9342e0-7e05-431e-8d07-2c854df1612f	Error: You are not authorized to perform this operation!
+20220526	23:08:44	77262eca-5473-4ec4-8af1-e1292d02349b	Error: You are not authorized to perform this operation!
+20220526	23:08:44	3eac5a69-4a04-4b4b-bb29-f74c6a8e9729	Error: You are not authorized to perform this operation!
+20220526	23:09:37	62b846ed-3fd0-4134-acc4-b6ecb6f09777	Error: You are not authorized to perform this operation!
+20220526	23:09:44	b2a6e23f-ba2a-4bb7-b14e-a5d3b3eb43b0	Error: You are not authorized to perform this operation!
+20220526	23:12:10	2d3f62a7-9edb-4b95-b6c2-d31eaddcf44d	Error: You are not authorized to perform this operation!
+20220526	23:12:25	24f64304-6832-44a1-bcda-ea72492da61a	Error: You are not authorized to perform this operation!
+20220526	23:19:58	a1553e8a-a484-4386-96c8-29b734f88e18	TypeError: expressJWT is not a function
+20220527	00:12:25	6a307b02-a32a-4d56-b6ab-149a7bc8027d	TypeError: jwt.verify is not a function
+20220527	00:13:34	84a37b6d-94d3-4018-a606-bd29e054f7d4	JsonWebTokenError: jwt must be a string
+20220527	00:14:21	e02cb332-1edf-4937-b423-2888a2fba0ef	JsonWebTokenError: jwt must be a string
+20220527	00:15:02	2d8a3303-668f-4a45-95f3-736194226036	TypeError: token.verify is not a function
+20220527	00:15:02	952fee27-7135-4782-80a9-21e5139fb390	TypeError: token.verify is not a function
+20220527	00:16:35	5727c692-810f-4f18-80ea-8442ff62f904	JsonWebTokenError: jwt must be a string
+20220527	00:26:09	153601a2-cfbd-4e28-8c66-3e19b7436903	TypeError: argument name is invalid
+20220527	00:26:33	8256552b-c1e3-4ed6-85c1-e967402efe34	TypeError: argument name is invalid
+20220527	02:03:07	0d4554cd-d758-487f-bbcd-09b8992693e2	JsonWebTokenError: invalid token
+20220527	05:08:20	23888f0f-1e02-4a32-bdb6-37f28affa27e	ReferenceError: Cannot access 'jwtoutput' before initialization
+20220527	05:12:04	fc70e1f1-9ddd-4b26-92d5-3d69291c664b	ReferenceError: Cannot access 'hello' before initialization
+20220527	05:12:53	72845012-843b-4a89-9bb5-2e5ca4dda1b7	ReferenceError: hello is not defined
+20220527	10:20:55	8c59eda2-7acc-40bf-9289-47cc4042d269	ReferenceError: err is not defined
+20220527	10:42:55	69bf874e-e828-42a7-931a-2edd67781223	Error: Unknown authentication strategy "jwt"
+20220527	10:43:25	1f3fdc5e-6660-454c-aca5-f51f36a6dfdb	Error: Unknown authentication strategy "jwt"
+20220527	10:43:44	bc3fa8d3-6605-4e32-a5aa-bdd2c6a0d363	Error: Unknown authentication strategy "jwt"
+20220527	10:52:27	1097f193-12d2-4ebf-a133-8c2dcc5253e7	JsonWebTokenError: jwt must be a string
+20220527	11:02:16	95d82fd2-ad3d-4948-a998-0847d022c005	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220527	11:02:40	9c2829b2-8acb-488e-b200-50f2dc2eceb9	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220527	11:03:14	138dfe0b-5bc3-4e98-9ad6-b117b20f707f	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220527	11:03:23	39374438-fffc-4e15-b978-983fb53bfe8d	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220527	11:03:28	1be6eed8-3360-4480-aa32-6e5a34fe85dd	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220527	11:14:11	b55ac92d-b415-49ae-9620-60d5997377d5	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')
+20220527	15:53:59	f8f8fa94-4576-4f89-96a1-fc8a28e1ffd5	InvalidTokenError: Invalid token specified: Cannot read properties of undefined (reading 'replace')

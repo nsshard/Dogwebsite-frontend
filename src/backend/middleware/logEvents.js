@@ -4,6 +4,10 @@ const fs = require('fs');
 const fsPromises = require('fs').promises;
 const path = require('path');
 
+/**
+ * Script will log events, and display date and logged item
+ * 
+ */
 const logEvents = async (message, logName) => {
     const dateTime = `${format(new Date(), 'yyyyMMdd\tHH:mm:ss')}`;
     const logItem = `${dateTime}\t${uuid()}\t${message}\n`;
@@ -18,6 +22,11 @@ const logEvents = async (message, logName) => {
         console.log(err);
     }
 }
+
+/**
+ * Writes to the log txt
+ * 
+ */
 
 const logger = (req, res, next) => {
     logEvents(`${req.method}\t${req.headers.origin}\t${req.url}`, 'reqLog.txt');

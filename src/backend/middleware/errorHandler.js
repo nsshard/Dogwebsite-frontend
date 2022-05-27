@@ -1,5 +1,9 @@
 const { logEvents } = require('./logEvents');
 
+/**
+ * Handles and display errors on error log txt file
+ * 
+ */
 const errorHandler = (err, req, res, next) => {
     logEvents(`${err.name}: ${err.message}`, 'errLog.txt');
     console.error(err.stack)

@@ -6,17 +6,17 @@ import Browsedogs from "./browsedogs";
 import Login from "./login";
 import axios from "./axios";
 import Register from "./register";
-import Admin from "./Admin";
 import Adminpanel from "./adminpanel";
 import Modifydogs from "./modifydogs";
 import Comments from "./comments";
 import Deletedogs from "./deletedogs";
 import Managemsg from "./managemsg";
 const URL = "http://localhost:3000/logout";
-const URLname = "http://localhost:3000/userinfo";
-var token = '4868f80777e4c7a3c766e61bfb0c3cf163bfcd3a393cccfe159436e13fd6d825f20d62bafc54380889107d2d16ba31eb470363d74943ae384fc60895abc6d4bd'; 
 
-//handle button submit, this button is to handle logout button with axios which sends request-cookie, allowing it to be wiped
+/**
+ * Handles submit, in this case, it is used for the logout function.
+ * 
+ */
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
@@ -42,9 +42,10 @@ const handleSubmit = async (e) => {
 
 
 
- 
-
-
+ /**
+ * Main component to display the top row of buttons
+ * 
+ */
 
 class App extends Component {
   

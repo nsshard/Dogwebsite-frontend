@@ -1,16 +1,20 @@
 import "./App.css";
 import React, { useRef, useState, useEffect } from "react";
 import axios from "./axios";
-import useRefreshToken from "./hooks/useRefreshToken";
-import useAxiosPrivate from "./hooks/useAxiosPrivate";
+
 import ImageUploading from 'react-images-uploading';
 const DOG_URL = "/dogs";
 const DOG_IMG_URL = "http://localhost:3000/img/${item.img}.jpg";
 
-
+/**
+ * Browse dog page
+ * 
+ */
 function Browsedogs() {
-  const axiosPrivate = useAxiosPrivate();
-
+/**
+ * Variables 
+ * 
+ */
   const userRef = useRef();
   const errRef = useRef();
   const [errMsg, setErrMsg] = useState("");
@@ -31,7 +35,10 @@ function Browsedogs() {
   const [file, setFile] = useState('');
   const [filename, setFilename] = useState('Choose File');
   const [uploadedFile, setUploadedFile] = useState({});
-
+/**
+ * Update image if it's changed
+ * 
+ */
   const onChange = (imageList, addUpdateIndex) => {
     console.log(imageList, addUpdateIndex);
     
@@ -39,23 +46,13 @@ function Browsedogs() {
   };
 
 
-   /* const onImageUploadToServer = () => { 
-    axios({
-        method:'post',
-        url:'http://localhost:3000/img',
-        headers: {
-            'Content-Type': images
-          }
-         
-    });
-    setImages();
-    alert(ImageUploading.dataURLKey);
-  }
-    */  
     
 
-  const getalldogs = useRefreshToken();
 
+/**
+ * These useeffect keeps the fields updated so they can be used in forms
+ * 
+ */
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -65,13 +62,19 @@ function Browsedogs() {
   }, [id, name, breed, location]);
 
 
-
+/**
+ * Handles submit, prevents default
+ * 
+ */
   const handleSubmit = async (e) => {
     e.preventDefault();
   };
 
 
-
+/**
+ * Get data using fetch, this is unrestricted 
+ * 
+ */
   const fetchData = () => {
     fetch(URL)
       .then((res) => res.json())
@@ -82,16 +85,11 @@ function Browsedogs() {
       });
   };
 
-  const Searchdog = () => {
-    fetch(URL)
-      .then((res) => res.json())
 
-      .then((response) => {
-        console.log(response);
-        getData(response);
-      });
-  };
-
+/**
+ * Get dog by ID, searching function for the public
+ * 
+ */
   const getdogbyID = () => {
     fetch(URL+"/dogid/"+id)
     .then((res) => res.json())
@@ -101,6 +99,10 @@ function Browsedogs() {
     });
 };
 
+/**
+ * Get dog by name, searching function for the public
+ * 
+ */
 const getdogbyName = () => {
     fetch(URL+"/dogname/"+name)
     .then((res) => res.json())
@@ -110,6 +112,10 @@ const getdogbyName = () => {
     });
 };
 
+/**
+ * Get dog by breed, searching function for the public
+ * 
+ */
 const getdogbyBreed = () => {
     fetch(URL+"/dogbreed/"+breed)
     .then((res) => res.json())
@@ -119,7 +125,10 @@ const getdogbyBreed = () => {
     });
 };
 
-
+/**
+ * Get dog by location, searching function for the public
+ * 
+ */
 const getdogbyLocation = () => {
     fetch(URL+"/doglocation/"+location)
     .then((res) => res.json())
@@ -138,7 +147,7 @@ const getdogbyLocation = () => {
       {success ? (
         <section>
           <br></br>
-          <h1>Dog successfully modified!</h1>
+          <h1>Server received response. Please check HTML response</h1>
         </section>
       ) : (
         <section>
@@ -161,11 +170,7 @@ const getdogbyLocation = () => {
               <h1>Dog browser</h1>
             </div>
 
-            <div className="textthingyguidefind">
-              <h3>Search: Partial query for fields</h3>
-              <br></br>
-              <h3>Filter: Must contain items for fields</h3>
-            </div>
+         
 
             <div className="scrolldownrem">
               <h1>Scroll down to get a list of current dogs!</h1>
@@ -238,9 +243,7 @@ const getdogbyLocation = () => {
                 <button onClick={() => fetchData()}>All dogs</button>
               </div>
 
-              <div className="searchdogs">
-                <button onClick={() => Searchdog()}>Search</button>
-              </div>
+           
 
               
               
